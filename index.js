@@ -184,6 +184,9 @@ function table(x) {
     }
     table += `</tbody>
         </table>`;
+    if (data.length <= 0) {
+        table = "";
+    }
     document.getElementById("database").innerHTML = table;
     document.getElementById("selectRecord").innerHTML = record;
     document.getElementById("list").innerHTML = lists;
@@ -264,7 +267,7 @@ function Edit(x) {
         data[x - 1] = a;
         localStorage.setItem("listCustomer", JSON.stringify(data));
         a = {}
-        table();
+        table(data.length);
         updatebg.style = `display:none!important`;
         overlay.style = `display:none!important`;
         Fnotice('Edit')
@@ -311,15 +314,15 @@ function changeRecord() {
     let x = document.getElementById("selectRecord").value;
     table(x);
     document.getElementById("selectRecord").value = x
-    
+
     let buttons = document.querySelectorAll(".listbutton");
     [...buttons].forEach((e, index) => {
         e.addEventListener("click", function () {
             let re = "";
             let stat = x * (index + 1) - x + 1;
-            if(index == buttons.length - 1){
+            if (index == buttons.length - 1) {
                 var en = data.length;
-                
+
             }
             else {
                 var en = x * (index + 1);
@@ -333,9 +336,9 @@ function changeRecord() {
                 re += `<td> <button class="btn btn-primary" onclick="Edit(${data[i - 1].ID})"><i class='bx bx-edit-alt'></i></button> 
                             <button class="btn btn-primary" onclick="Delete(${data[i - 1].ID})"><i class='bx bxs-trash'></i></button></td>`;
                 re += `</tr>`;
-        
+
             }
-           document.getElementById("bdy").innerHTML = re;
+            document.getElementById("bdy").innerHTML = re;
         })
     })
 
