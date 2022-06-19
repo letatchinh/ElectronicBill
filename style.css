@@ -1,0 +1,53 @@
+.mainunit{
+    position: relative;
+}
+.unit{
+    position: absolute;
+    right: -60px;
+    color: red;
+}
+p{
+
+    padding-left: 200px;
+    color: red;
+}
+th , td , tr {
+    border: 1px solid black;
+}
+th , td {
+    text-align: center;
+    padding: 5px;
+}
+.update{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    display: none!important;
+    z-index: 2;
+
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(105, 102, 102, 0.5);
+    z-index: 1;
+    display: none;
+}
+thead{
+    background-color: rgb(60, 187, 60);
+}
+table{
+    /* margin: 50px auto; */
+}
+#notice{
+    color: #066EFD;
+    margin-top: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.2s ease;
+}
