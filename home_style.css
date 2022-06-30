@@ -1,0 +1,204 @@
+body{
+    background-image: url(./img/city.jpeg);
+    background-size: 100%;
+}
+.top__right button{
+    height: 40px;
+    margin-right: 10px;
+    box-shadow: -2px 0px 11px 2px #5a9bd5;
+}
+.welcome{
+    padding: 13rem 0;
+   
+}
+.welcome h2 , .welcome h1{
+    text-shadow: 0 0 13px white;
+}
+footer{
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.register{
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: #00000094;
+    display: none;
+}
+.login{
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+.top__right i{
+    color: #5a9bd5;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 25px;
+
+}
+.nameUser{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+.nameUser:hover{
+    color: white;
+    text-shadow:  0 0 13px white;
+}
+.avatauser{
+    display: none;
+}
+.search{
+    display: none;
+}
+.result{
+    background: white;
+    color: black;
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.result div{
+    padding: 10px;
+    border-radius: inherit;
+}
+.result div:hover{
+    background-color: gray;
+}
+.active{
+    background-color: gray;
+}
+.bill , .manageUsertable{
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.manageUsertable{
+    display: none;
+    top: 5rem;
+    background: linear-gradient(to right , #232526 ,#414345);
+    color: white;
+    border-radius: 10px;
+}
+.manageuser , .logout{
+    display: none;
+}
+#tableUser input{
+    display: none;
+}
+.girdSystem{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25px 25px 25px 25px;
+}
+table{
+    width: 100%;
+}
+th , td {
+    text-align: center;
+    border: 1px solid black;
+}
+#closeBill{
+    font-size: 25px;
+    cursor: pointer;
+}
+#user{
+    position: relative;
+    transition: 0.3s ease;
+}
+#user:hover{
+    box-shadow: 0 0 5px 2px white;
+}
+.cirle{
+    padding: 5px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+    bottom: 7%;
+    right: 7%;
+    border: 1px solid white;
+}
+.dropdownUser{
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    background-color: white;
+    font-size: 18px;
+    color: black;
+    width: max-content;
+    text-align: right;
+    padding: 10px;
+    font-family : Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    display: none;
+}
+.toggleClick{
+    display: block;
+}
+.dropdownUser div{
+    padding: 5px;
+    border-radius: inherit;
+    transition: 0.5s ease;
+    word-wrap: none;
+}
+.dropdownUser div:hover{
+    background-color: #5a9bd5;
+
+}
+.close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 29px;
+    color: white;
+    background-color: #BB0F10;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.close:hover{
+    box-shadow: 0 0 5px 2px grey;
+}
+.AnimateText{
+    animation: TextUp 2s alternate,lightText 2s infinite;
+    user-select: none;
+}
+@keyframes TextUp{
+    0%{
+        transform: translateY(-600px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes lightText{
+    0%{
+        text-shadow: 0 0 13px white;
+    }
+    50%{
+        text-shadow: 0 0 30px white;
+    }
+    100%{
+        text-shadow: 0 0 13px white;
+    }
+}
